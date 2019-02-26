@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TPPush'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of TPPush.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -15,7 +15,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.source_files = 'TPPush/Classes/TPPush.h'
-#s.static_framework = true
+
   s.subspec 'Base' do |ss|
     ss.source_files = 'TPPush/Classes/Base/**/*'
     ss.private_header_files = 'TPPush/Classes/Base/TPPushMethodSwizzling.h'
