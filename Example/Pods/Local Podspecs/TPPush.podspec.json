@@ -19,7 +19,6 @@
     "ios": "8.0"
   },
   "source_files": "TPPush/Classes/TPPush.h",
-  "static_framework": true,
   "subspecs": [
     {
       "name": "Base",

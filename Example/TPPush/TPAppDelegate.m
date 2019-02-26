@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [TPPushInterface registerNotificationWithModel:TPGTPushModel(@"cnC6ZmPMqX79vi1G6IW2l4", @"SZI9E8jobP6jVJisD0pot6", @"0MjAxe1HeG73KzcShPPvnA")];
     return YES;
 }
 

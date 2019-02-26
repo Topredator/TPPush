@@ -13,4 +13,7 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+
+#import <TPPush/TPPush.h>
+#import <TPUIKit/TPUIKit.h>
 #endif

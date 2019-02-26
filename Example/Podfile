@@ -4,7 +4,8 @@ platform :ios, '8.0'
 
 target 'TPPush_Example' do
   pod 'TPPush', :path => '../'
-
+  pod 'TPUIKit'
+  
   target 'TPPush_Tests' do
     inherit! :search_paths
 
