@@ -23,6 +23,11 @@
   "subspecs": [
     {
       "name": "Base",
+      "dependencies": {
+        "TPPush/Public": [
+
+        ]
+      },
       "source_files": "TPPush/Classes/Base/**/*",
       "private_header_files": "TPPush/Classes/Base/TPPushMethodSwizzling.h"
     },
@@ -35,8 +40,15 @@
         ],
         "GTSDK": [
           "~> 2.3.1.0"
+        ],
+        "TPPush/Public": [
+
         ]
       }
+    },
+    {
+      "name": "Public",
+      "source_files": "TPPush/Classes/Public/**/*"
     }
   ]
 }
