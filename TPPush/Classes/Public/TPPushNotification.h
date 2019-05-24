@@ -11,4 +11,5 @@
 UIKIT_EXTERN NSNotificationName const TPPushReceiveRemoteNotification;
 /// 接收到本地通知
 UIKIT_EXTERN NSNotificationName const TPPushReceiveLocalNotification;
-
+/// 接收到长连接的消息
+UIKIT_EXTERN NSNotificationName const TPPushReceiveLongConnectionNotification;

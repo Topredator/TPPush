@@ -8,10 +8,6 @@
 #import "TPPushInterface.h"
 #import "TPPushManager.h"
 
-
-NSNotificationName const TPPushReceiveRemoteNotification = @"topredator.push.notification.remote";  ///    接收到远程推送通知
-NSNotificationName const TPPushReceiveLocalNotification = @"topredator.push.notification.local";  /// 接收到本地通知
-
 @implementation TPPushInterface
 /// 注册通知
 + (void)registerNotificationWithModel:(TPPushBaseModel *)model {

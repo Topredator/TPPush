@@ -47,11 +47,15 @@
     // [ GTSdk ]：汇报个推自定义事件(反馈透传消息)
     [GeTuiSdk sendFeedbackMessage:90001 andTaskId:taskId andMsgId:msgId];
     
+    
     // 数据转换
-//    NSString *payloadMsg = nil;
-//    if (payloadData) {
-//        payloadMsg = [[NSString alloc] initWithBytes:payloadData.bytes length:payloadData.length encoding:NSUTF8StringEncoding];
-//    }
+    NSString *payloadMsg = nil;
+    if (payloadData) {
+        payloadMsg = [[NSString alloc] initWithBytes:payloadData.bytes length:payloadData.length encoding:NSUTF8StringEncoding];
+    }
+    if (!offLine) {
+        [TPPushManager.shareInstance handleConnectWithMsgString:payloadMsg];
+    }
 //
 //    // 控制台打印日志
 //    NSString *msg = [NSString stringWithFormat:@"taskId=%@,messageId:%@,payloadMsg:%@%@", taskId, msgId, payloadMsg, offLine ? @"<离线消息>" : @""];

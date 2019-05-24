@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TPPushInterface.h"
-
+#import "TPPushNotification.h"
 
 @interface TPPushManager : NSObject
 @property (nonatomic, weak) id <TPPushDataSource> datasource;
@@ -26,5 +26,8 @@
 - (void)cancleAllLocalNotifications;
 // 设置角标
 - (void)setModelBadge:(NSInteger)modelBadge;
+
+// 处理长连接
+- (void)handleConnectWithMsgString:(NSString *)msgString;
 @end
 

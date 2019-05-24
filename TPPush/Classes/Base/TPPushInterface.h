@@ -7,11 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TPPushBaseModel.h"
-
-#pragma mark ==================  通知定义   ==================
-UIKIT_EXTERN NSNotificationName const TPPushReceiveRemoteNotification;  ///    接收到远程推送通知
-UIKIT_EXTERN NSNotificationName const TPPushReceiveLocalNotification;  /// 接收到本地通知
-
+#import "TPPushNotification.h"
 
 @protocol TPPushDataSource <NSObject>
 @optional
@@ -19,6 +15,8 @@ UIKIT_EXTERN NSNotificationName const TPPushReceiveLocalNotification;  /// 接�
 - (void)handleRemoteNotification:(NSDictionary *)notification;
 // 处理本地通知
 - (void)handleLocalNotification:(NSDictionary *)notification;
+// 处理长连接消息
+- (void)handleLongConnectionNotification:(NSString *)msgString;
 @end
 
 @interface TPPushInterface : NSObject

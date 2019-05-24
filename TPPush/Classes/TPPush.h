@@ -9,5 +9,6 @@
 #import "TPPushManager.h"
 #import "TPPushBaseModel.h"
 
+#import "TPPushNotification.h"
 
 #import "TPPushGTModel.h"

@@ -141,6 +141,13 @@ static TPPushManager *pushManager = nil;
     _baseModel = baseModel;
     [_baseModel initRegister];
 }
+- (void)handleConnectWithMsgString:(NSString *)msgString {
+    if (!msgString) return;
+    if (self.datasource && [self.datasource respondsToSelector:@selector(handleLongConnectionNotification:)]) {
+        [self.datasource handleLongConnectionNotification:msgString];
+    }
+    [NSNotificationCenter.defaultCenter postNotificationName:TPPushReceiveLongConnectionNotification object:msgString];
+}
 #pragma mark ==================  Private method  ==================
 - (void)handleRemoteNotification:(NSDictionary *)userInfo {
     if (!userInfo) return;

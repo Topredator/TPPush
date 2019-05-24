@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TPPush'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A short description of TPPush.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -17,6 +17,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'TPPush/Classes/TPPush.h'
   s.static_framework = true
   s.subspec 'Base' do |ss|
+    ss.dependency 'TPPush/Public'
     ss.source_files = 'TPPush/Classes/Base/**/*'
     ss.private_header_files = 'TPPush/Classes/Base/TPPushMethodSwizzling.h'
   end
@@ -25,6 +26,9 @@ TODO: Add long description of the pod here.
     ss.source_files = 'TPPush/Classes/GT/**/*'
     ss.dependency 'TPPush/Base'
     ss.dependency 'GTSDK', '~> 2.3.1.0'
+    ss.dependency 'TPPush/Public'
   end
-
+  s.subspec 'Public' do |ss|
+      ss.source_files = 'TPPush/Classes/Public/**/*'
+  end
 end
