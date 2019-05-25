@@ -8,12 +8,17 @@
 
 #import "TPAppDelegate.h"
 
+#define kGTDevAppId @"gLCYwQiwJy53Eh2or5DOX4"
+#define kGTDevAppKey @"cfUBRwz1Eo6rNUadkhlQ28"
+#define kGTDevAppSecret  @"bt4jtbb8rw6uhUtjAZrXz8"
+
 @implementation TPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [TPPushInterface registerNotificationWithModel:TPGTPushModel(@"cnC6ZmPMqX79vi1G6IW2l4", @"SZI9E8jobP6jVJisD0pot6", @"0MjAxe1HeG73KzcShPPvnA")];
+//    [TPPushInterface registerNotificationWithModel:TPGTPushModel(@"cnC6ZmPMqX79vi1G6IW2l4", @"SZI9E8jobP6jVJisD0pot6", @"0MjAxe1HeG73KzcShPPvnA")];
+    [TPPushInterface registerNotificationWithModel:TPGTPushModel(kGTDevAppId, kGTDevAppKey, kGTDevAppSecret)];
     return YES;
 }
 

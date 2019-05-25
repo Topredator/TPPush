@@ -19,7 +19,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(testLocalNotification:) name:TPPushReceiveLocalNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(connectionNotify:) name:TPPushReceiveLongConnectionNotification object:nil];
     [self fireLocalMessage];
+}
+- (void)connectionNotify:(NSNotification *)notify {
+    NSString *msg = notify.object;
+    if (!msg) return;
+    NSLog(@"%@", msg);
 }
 - (void)fireLocalMessage {
     /*
