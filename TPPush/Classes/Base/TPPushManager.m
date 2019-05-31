@@ -62,6 +62,9 @@ static TPPushManager *pushManager = nil;
 #pragma clang diagnostic pop
     }
 }
+- (void)closeRemotePushService {
+    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+}
 // 注入设备Token
 - (void)injectionDeviceToken {
     Class class = kApplicationDelegate.class;

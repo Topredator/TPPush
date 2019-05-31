@@ -50,4 +50,11 @@
 + (void)setupBadge:(NSInteger)badge {
     [TPPushManager.shareInstance setModelBadge:badge];
 }
++ (void)registerRemoteNotificationService {
+    [TPPushManager.shareInstance registerNotification];
+}
+/// 关闭远程推送服务
++ (void)closeRemoteNotificationService {
+    [TPPushManager.shareInstance closeRemotePushService];
+}
 @end

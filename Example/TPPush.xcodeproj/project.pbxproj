@@ -66,7 +66,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		909E94DCF133DC920112C7E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		94D369BD2298CA2700B0BEED /* TPPush_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TPPush_Example.entitlements; sourceTree = "<group>"; };
-		A2428F63A959D41F2FD0BB2F /* TPPush.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TPPush.podspec; path = ../TPPush.podspec; sourceTree = "<group>"; };
+		A2428F63A959D41F2FD0BB2F /* TPPush.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TPPush.podspec; path = ../TPPush.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E18E259A24459A1B4008AA48 /* Pods-TPPush_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPPush_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPPush_Tests/Pods-TPPush_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,24 +333,20 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TPPush_Example/Pods-TPPush_Example-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TPPush_Example/Pods-TPPush_Example-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/TPUIKit/TPUIKit/Assets/Refresh.xcassets",
 				"${PODS_ROOT}/TPUIKit/TPUIKit/Assets/Toast.xcassets",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TPPush_Example/Pods-TPPush_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TPPush_Example/Pods-TPPush_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9780F9BD37084FB61106C4B /* [CP] Check Pods Manifest.lock */ = {

@@ -29,5 +29,9 @@
 
 // 处理长连接
 - (void)handleConnectWithMsgString:(NSString *)msgString;
+// 注册通知
+- (void)registerNotification;
+// 关闭推送服务
+- (void)closeRemotePushService;
 @end
 

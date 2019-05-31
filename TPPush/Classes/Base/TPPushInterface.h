@@ -40,6 +40,11 @@
 + (void)emptyLocal;
 /// 设置角标
 + (void)setupBadge:(NSInteger)badge;
+
+/// 注册远程推送服务
++ (void)registerRemoteNotificationService;
+/// 关闭远程推送服务
++ (void)closeRemoteNotificationService;
 @end
 
 

@@ -35,6 +35,9 @@
 - (void)setBadge:(NSInteger)badge {
     [GeTuiSdk setBadge:badge];
 }
+- (void)customChannelId:(NSString *)channelId {
+    [GeTuiSdk setChannelId:channelId];
+}
 #pragma mark ==================  GeTuiSdkDelegate   ==================
 - (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
     //  记录个推的clientId 用于服务端推送
